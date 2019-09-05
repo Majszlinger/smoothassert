@@ -9,7 +9,7 @@ requirements = ["pandas>=0.24","numpy>=1.17","scikit-learn>=0.21"]
 
 setup(
     name="smoothassert",
-    version="0.1.2",
+    version="0.1.3",
     author="Tamás Majszlinger",
     author_email="tomcsojn@gmail.com",
     description="Custom Assertions for unittest with Pandas.Series and DataFrames. Similarity tests, based on pandas.testing",
