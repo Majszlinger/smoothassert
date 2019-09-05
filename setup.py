@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
 
@@ -9,7 +9,7 @@ requirements = ["pandas>=0.24","numpy>=1.17","scikit-learn>=0.21"]
 
 setup(
     name="smoothassert",
-    version="0.1.1",
+    version="0.1.2",
     author="Tamás Majszlinger",
     author_email="tomcsojn@gmail.com",
     description="Custom Assertions for unittest with Pandas.Series and DataFrames. Similarity tests, based on pandas.testing",

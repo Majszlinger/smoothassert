@@ -23,7 +23,7 @@ def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=Tru
     
     s1 Series
     s2 Series
-    percent: int between 0 and 1 default 0
+    percent: float between 0 and 1 default 0
         the allowable limit of the errors between the series given in percentage/100
     check_series_type : bool, default True
         Whether to check the Series class is identical.
@@ -76,7 +76,7 @@ def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
     
     s1 Series
     s2 Series
-    min_sim: int between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
+    min_sim: float between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
     
         
     """
