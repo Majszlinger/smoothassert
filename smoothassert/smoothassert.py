@@ -63,11 +63,12 @@ def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=Tru
 #    for i in range(len(s1)):
 #        if(s1[i]!=s2[i]):
 #            c+=1
-    c = (s1==s2).value_counts()[True]    
+    c = (s1==s2).value_counts()[False]    
     err = c/len(s1)
     if(err>percent):
         raise AssertionError("Series are diferent in {err}% while the allowable limit is {percent}%".format(err = err*100,percent = percent*100))
-
+    else:
+        print("OK, error rate:{err}".format(err = err*100))
 
 def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
     """
@@ -76,7 +77,7 @@ def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
     s1 Series
     s2 Series
     min_sim: int between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
-        
+    
         
     """
 #TODO: Add check names etc.    
