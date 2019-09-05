@@ -93,6 +93,8 @@ def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
         if(sim<min_sim):
             msg = 'on the {row}. row the similarity was less then the minimum: {min_sim}'.format(row=i,min_sim=min_sim)
             raise AssertionError(msg)
+        else:
+            print("OK")
     
           
     
