@@ -17,7 +17,7 @@ from pandas.core.dtypes.common import (
     is_bool, is_categorical_dtype,is_number)
 
 
-def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=True,check_dtype=True):
+def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=True,check_dtype=True,mute=True):
     """
     Check that left and right Series are Equal, or similar with the given error rate.
     
@@ -56,7 +56,8 @@ def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=Tru
                 ):
             pass
         else:
-            assert_attr_equal('dtype', s1, s2)
+            if(not mute):
+                assert_attr_equal('dtype', s1, s2)
 #   count errors
 
 #    c  = 0
@@ -70,14 +71,15 @@ def AssertSimilarSeries(s1,s2,percent = 0,check_series_type=True,check_names=Tru
     else:
         print("OK, error rate:{err}".format(err = err*100))
 
-def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
+def Assert_Cos_Sim_Series(s1,s2,min_sim = 0,mute = True):
     """
     Check that the cosine similarity between the elements of the two Series is bigger than the min_sim
     
     s1 Series
     s2 Series
     min_sim: float between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
-    
+    mute: bool default True
+        mutes the writen feedbacks
         
     """
 #TODO: Add check names etc.    
@@ -93,8 +95,9 @@ def Assert_Cos_Sim_Series(s1,s2,min_sim = 0):
         if(sim<min_sim):
             msg = 'on the {row}. row the similarity was less then the minimum: {min_sim}'.format(row=i,min_sim=min_sim)
             raise AssertionError(msg)
-        else:
-            print("OK")
+        
+    if(not mute):
+        print("OK")
     
           
     
