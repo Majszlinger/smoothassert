@@ -101,3 +101,11 @@ Whether to check the Series and Index names attribute.
 ## In development
 + Add check methods
 + Add a changeable text pre processor to Assert_Cos_Sim_Series, Lemmatization,stemm,remove stopwords etc.
+
+## License
+See [LICENSE](LICENSE) for license information.
+
+## Contribute / Contact Information
+If you have found errors or some instructions are not working anymore, then please open an GitHub issue or, better, create a pull request with your desired changes.
+
+You can also contact me at tomcsojn@gmail.com
