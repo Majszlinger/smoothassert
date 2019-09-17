@@ -99,7 +99,11 @@ def Assert_Cos_Sim_Series(s1,s2,min_sim = 0,mute = True):
     if(not mute):
         print("OK")
     
-          
+def Assert_Intesection():
+    """
+    Check that there is an intersection between pairs of lists in Series raise exception if not all row has intersection
+    """
+    pass          
     
 def assert_attr_equal(attr, left, right):
     """checks attributes are equal. Both objects must have attribute.

@@ -1,6 +1,6 @@
 # smoothassert
 
-This Package contains two custom Assertion methods to compare Pandas.Series objects.
+This Package contains custom Assertion methods to compare Pandas.Series objects.
 1. AssertSimilarSeries
 2. Assert_Cos_Sim_Series
 
@@ -98,6 +98,8 @@ Whether to check the Series and Index names attribute.
 + s1 Series
 + s2 Series
 + min_sim: float between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
++ mute: bool default True
+mutes the writen feedbacks
 ## In development
 + Add check methods
 + Add a changeable text pre processor to Assert_Cos_Sim_Series, Lemmatization,stemm,remove stopwords etc.
