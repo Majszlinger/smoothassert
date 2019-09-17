@@ -82,6 +82,7 @@ Assert_Cos_Sim_Series(out,expected,min_sim = 0.2)
 ```
 ## Documantation
 1. AssertSimilarSeries
+
 Check that left and right Series are Equal, or similar with the given error rate. 
 + s1 Series
 + s2 Series
@@ -94,7 +95,8 @@ Whether to check the Series and Index names attribute.
 + check_dtype : bool, default True
         Whether to check the Series dtype is identical.
 2. Assert_Cos_Sim_Series
-+ Check that the cosine similarity between the elements of the two Series is bigger than the min_sim
+
+Check that the cosine similarity between the elements of the two Series is bigger than the min_sim
 + s1 Series
 + s2 Series
 + min_sim: float between 0 and 1 default 0(what means if there is at least one token has to be similar in each row)
